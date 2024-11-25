@@ -1,0 +1,99 @@
+@use './variables.scss' as *;
+@import './variables.scss';
+
+@media (max-width: 768px) {
+  .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .menu-item {
+      width: 100%;
+      text-align: center;
+  }
+}
+
+body.rozklad {
+  font-family: $font-family-main;
+  color: $color-accent;
+  @include gradient-bg;
+  margin: 0;
+  padding: 0;
+}
+
+.rozklad__header {
+  background-color: $color-secondary;
+  padding: 20px 0;
+
+  .rozklad__title {
+    color: $color-light;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+}
+
+.rozklad__semester {
+  padding: 20px 0;
+
+  .rozklad__subtitle {
+    text-align: center;
+    font-size: 1.8rem;
+    color: $color-accent;
+  }
+}
+
+.rozklad__table {
+  padding: 40px 0;
+
+  .table {
+    background-color: $color-light;
+    border-collapse: collapse;
+    text-align: center;
+
+    th, td {
+      border: 1px solid $color-secondary;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    th {
+      background-color: $color-secondary;
+      color: $color-light;
+    }
+  }
+
+  .rozklad__teachers-title {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: $color-accent;
+    text-align: center;
+  }
+
+  .rozklad__teachers-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+
+    li {
+      margin: 5px 0;
+      color: $color-accent;
+    }
+  }
+}
+
+.rozklad__footer {
+  background-color: $color-secondary;
+  padding: 20px 0;
+
+  .rozklad__link {
+    color: $color-light;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

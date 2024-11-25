@@ -1,0 +1,46 @@
+$color-primary: #E68617;
+$color-secondary: #9A6F3D;
+$color-accent: #7B4404;
+$color-light: #F6CD9C;
+$color-light-secondary: #F6B162;
+
+$font-family-main: 'Roboto', sans-serif;
+
+@mixin gradient-bg {
+  background: linear-gradient(45deg, $color-primary, $color-light-secondary);
+}
+
+@media (max-width: 768px) {
+  .content-container {
+      width: 90%;
+      margin: 0 auto;
+  }
+}
+
+.ie-warning {
+  background-color: #ffcccb; 
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+
+
+@mixin button-style($bg-color, $hover-color) {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: $bg-color;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

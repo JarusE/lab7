@@ -1,0 +1,50 @@
+@use './variables.scss' as *;
+@import './variables.scss';
+
+@media (max-width: 768px) {
+  .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .menu-item {
+      width: 100%;
+      text-align: center;
+  }
+}
+
+body.about {
+  font-family: $font-family-main;
+  color: $color-accent;
+  @include gradient-bg;
+  margin: 0;
+  padding: 0;
+}
+
+.about__header {
+  background-color: $color-secondary;
+  padding: 20px 0;
+  text-align: center;
+
+  .about__title {
+    color: $color-light;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+.about__main {
+  padding: 40px 0;
+
+  .about__text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: $color-accent;
+  }
+
+  .about__link {
+    @include button-style($color-primary, $color-accent);
+  }
+}
